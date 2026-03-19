@@ -157,7 +157,7 @@ jobs:
         if: steps.compare.outputs.should_build == 'true'
         uses: ncipollo/release-action@v1
         with:
-          token: ${{ secrets.IGH_TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}
           tag: ${{ steps.get_latest_tag.outputs.latest_tag }}
           name: OpenWrt x86_64 ${{ steps.get_latest_tag.outputs.latest_tag }}
           body: |
